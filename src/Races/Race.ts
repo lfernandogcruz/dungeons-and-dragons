@@ -1,7 +1,6 @@
 abstract class Race {
   private _name: string;
   private _dexterity: number;
-  _maxLifePoints?: number;
   
   constructor(
     name: string,
@@ -19,8 +18,7 @@ abstract class Race {
     return this._dexterity;
   }
 
-  public abstract get maxLifePoints(): number | unknown {
-    return this._maxLifePoints;
+  public abstract get maxLifePoints(): number {
   }
 
   public static createdRacesInstances(): number | void {
